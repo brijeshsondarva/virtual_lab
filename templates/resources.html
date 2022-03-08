@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block navs %}
+<li ><a href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'about' %}">About Us</a></li>
+<li class="active">
+  <a
+    href="{% url 'resources' %}"
+    >Resources</a
+  >
+</li>
+{% comment %}
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+{% endcomment %}
+<li ><a href="{% url 'contact' %}">Contact</a></li>
+{% endblock navs %} 
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{% block body %}
+<section id="inner-headline">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="pageTitle">Resources</h2>
+      </div>
+    </div>
+  </div>
+</section>
+{% comment %} <section id="content"> {% endcomment %}
+	{% comment %} <iframe class="document" src="https://virtual-center.readthedocs.io/en/latest/index.html" frameborder="0"></iframe> {% endcomment %}
+{% comment %} </section> {% endcomment %}
+
+{% endblock body %}
